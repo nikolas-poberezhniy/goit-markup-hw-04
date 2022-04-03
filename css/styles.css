@@ -18,6 +18,10 @@ body {
     ;
 }
 
+svg{
+    fill: currentColor;
+}
+
 p,
 ul,
 h1,
@@ -65,7 +69,10 @@ h6 {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+    text-align: center;
 }
+
+
 
 /* ---------------------header--------------------- */
 .wrapper-header {
@@ -106,8 +113,15 @@ h6 {
     margin-left: 50px;
 }
 
+
+
 .auth-nav {
     margin-left: auto;
+
+}
+
+.auth-nav li+li{
+    margin-left: 30px;
 }
 
 .nav-link {
@@ -115,7 +129,7 @@ h6 {
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    ;
+    
     color: inherit;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -128,27 +142,36 @@ h6 {
 
 }
 
-.contact-link {
-    color: var(--secondary-text-color);
-}
-
-.contact-link:hover::before{
-    display: inline-flex;
+.envelope{
     width: 16px;
     height: 12px;
-    content: "";
-    background-image: url(/images/Vector.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    margin-right: 10px;
 }
+
+.smartphone{
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.contact-link {
+    color: var(--secondary-text-color);
+    display: inline-flex;
+    align-items: center;
+}
+
 
 /* ---------------------hero--------------------- */
 
 .hero {
     background-color: var(--background-color);
+    background-image: linear-gradient( to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bakground.jpg);
+    
     padding: 200px 0px;
     text-align: center;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -222,6 +245,19 @@ h6 {
     padding-bottom: 0px;
 }
 
+.adv-icon{
+    background-color: #F5F4FA;
+    padding: 25px 0px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.adv-icon>svg{
+    height: 70px;
+}
+
 /* ---------------------activity--------------------- */
 
 .activity {
@@ -260,7 +296,7 @@ h6 {
     display: flex;
 }
 
-.team li {
+.team .item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -289,11 +325,81 @@ h6 {
     padding: 30px 0px;
 }
 
+.social-media{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 0px;
+}
+
+.social-media a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #AFB1B8;
+}                       
+
+.social-media a:hover,
+.social-media a:focus{
+    background-color: var(--style-color);
+    color: var(--general-color);
+ 
+}
+
+.social-media li+li{
+    margin-left: 10px;
+}
+
+.social-media svg{
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ---------------------clients--------------------- */
+.clients .list{
+    display: flex;
+}
+
+.clients li:not(:last-child){
+    margin-right: 30px;
+}
+
+.clients a{
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: #AFB1B8;
+}
+
+.clients a:hover,
+.clients a:focus{
+    color: var(--style-color);
+    border-color: var(--style-color);
+
+}
+
+
+
+.clients svg{
+    width:106px;
+    height:60px;
+}
+
+
 /* ---------------------footer--------------------- */
 .footer {
     background-color: var(--background-color);
     padding-top: 60px;
     padding-bottom: 60px;
+    display: flex;
 }
 
 .footer .logo {
@@ -309,7 +415,7 @@ h6 {
     font-style: normal;
 }
 
-.footer li+li {
+.footer address li+li {
     margin-top: 10px;
 }
 
@@ -320,6 +426,40 @@ h6 {
 .footer-address {
     color: var(--general-color);
 }
+
+.footer .container{
+    display: flex;
+
+}
+
+.studio-social-media{
+    padding-top: 12px;
+    margin-left: 70px;
+}
+
+.studio-social-media .social-media{
+    margin-top: 20px;
+}
+
+.studio-social-media a{
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--general-color);
+}
+
+.studio-social-media a:hover{
+    background: var(--style-color);
+}
+
+.studio-social-media p{
+    text-transform: uppercase;
+    color: var(--general-color);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.2;
+
+}
+
+
 
 
 
@@ -382,6 +522,11 @@ h6 {
 .portfolio-card-set {
     display: flex;
     flex-wrap: wrap;
+}
+
+.portfolio-card:hover,
+.portfolio-card:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-card img {
