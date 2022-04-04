@@ -54,7 +54,7 @@ h6 {
     font-size: 36px;
     font-weight: bold;
     line-height: 1.15;
-
+    text-align: center;
 }
 
 .container {
@@ -69,7 +69,7 @@ h6 {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
-    text-align: center;
+    
 }
 
 
@@ -246,9 +246,10 @@ h6 {
 }
 
 .adv-icon{
+    display: flex;
     background-color: #F5F4FA;
-    padding: 25px 0px;
-    text-align: center;
+    height: 120px;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     border-radius: 4px;
@@ -256,6 +257,7 @@ h6 {
 
 .adv-icon>svg{
     height: 70px;
+    width: 70px;
 }
 
 /* ---------------------activity--------------------- */
@@ -299,6 +301,7 @@ h6 {
 .team .item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    background-color: var(--general-color);
 }
 
 .team li+li {
@@ -328,7 +331,7 @@ h6 {
 .social-media{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 16px;
     font-size: 0px;
 }
 
